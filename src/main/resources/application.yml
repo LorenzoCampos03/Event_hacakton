@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: evento-microservice
+  r2dbc:
+    url: r2dbc:postgresql://ep-little-moon-a88zz1ax-pooler.eastus2.azure.neon.tech:5432/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_hLox9ID3Czsd
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+
+server:
+  port: 9085
+
+logging:
+  level:
+    root: INFO
+    io.r2dbc.postgresql.QUERY: DEBUG
+    io.r2dbc.postgresql.PARAM: DEBUG
